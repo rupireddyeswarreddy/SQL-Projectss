@@ -1,0 +1,935 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  <title>PowerPoint Presentation</title>
+  <meta name="generator" content="LibreOffice 7.4.7.2 (Linux)"/>
+  <meta name="author" content="Eswar Rupireddy"/>
+  <meta name="created" content="2024-04-03T12:44:43"/>
+  <meta name="changedby" content="Eswar Rupireddy"/>
+  <meta name="changed" content="2024-04-19T13:20:51"/>
+  <meta name="AppVersion" content="16.0000"/>
+  <meta name="PresentationFormat" content="Widescreen"/>
+  <meta name="Slides" content="19"/>
+</head>
+<body>
+<h1></h1>
+<p><b>Rupireddy Eswar</b></p>
+<p><b>Rupireddy Eswar</b></p>
+<p><b>CINEMATIC  INSIGHTS : Analysing Movie Data</b></p>
+<p><b>1</b></p>
+<p><b>19-04-2024</b></p>
+<p><b>Rolling Action</b></p>
+<h1 style="page-break-before:always; "></h1>
+<h1 style="page-break-before:always; ">Table of Content : </h1>
+<ul>
+<li>Project Overview</li>
+<li>Dataset</li>
+<li>Database Schema</li>
+<li>Data Types</li>
+<li>Queries and Analysis</li>
+<li>Tools and Management</li>
+</ul>
+<h1 style="page-break-before:always; "><u>Project Overview</u></h1>
+<ul>
+<li>Introduction</li>
+<h2>The project aims to analyze a dataset of movies, extracting insights and generating reports to understand trends and patterns in the film industry.</h2>
+<li>Objectives</li>
+<h2>Analyze movie data to identify trends in genres, ratings, and box office performance.</h2>
+<h2>Extract insights to inform decision-making for filmmakers, producers, and studios.</h2>
+<h2>Showcase proficiency in SQL queries, data analysis, and visualization techniques.</h2>
+<li>Scope</li>
+<h2>The project will cover data analysis of movies, including information on actors, awards, budgets, and languages. It will not include external factors such as marketing strategies or audience demographics.</h2>
+</ul>
+<h1 style="page-break-before:always; "></h1>
+<ul>
+<li>Approach</li>
+<h2>The project will use SQL queries to extract and analyze data from a relational database. Data preprocessing techniques will be applied to clean and prepare the dataset for analysis. Visualization tools will be used to present findings effectively.</h2>
+</ul>
+<h1 style="page-break-before:always; "><u>Dataset</u></h1>
+<ul>
+<li>Description of Dataset</li>
+<h2>The dataset consists of movie-related information, including titles, release years, genres, ratings, actor names, awards, budgets, and languages.</h2>
+<li>Data Sources</li>
+<h2>The data was sourced from reputable databases and websites providing information on movies and entertainment.</h2>
+<li>Data Preprocessing</li>
+<h2>Before analysis, the dataset underwent preprocessing steps, including cleaning missing values, standardizing data formats, and removing duplicates.</h2>
+<li>Database Schema</li>
+<h2>The database schema includes tables for movies, actors, awards, budgets, and languages, with appropriate relationships defined between them.</h2>
+</ul>
+<h1 style="page-break-before:always; ">Entity-Relationship Diagram (ERD)</h1>
+<h1 style="page-break-before:always; "><u>Table Overview</u>
+</h1>
+<ul>
+<li>Movie: Contains information about movies, such as titles, release years, genres, and ratings.</li>
+<li>Movie Actor: Stores data on actors associated with movies.</li>
+<li>Awards: Records details of awards received by movies, including names, categories, and years.</li>
+<li>Movie Budget: Tracks budget and gross income information for movies.</li>
+<li>Languages: Lists languages associated with movies.</li>
+</ul>
+<h1 style="page-break-before:always; ">Tables Data</h1>
+<table>
+  <tr>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+<p>movies_list</p>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+<p>languages</p>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p>movie_id</p>
+    </td>
+    <td>
+<p>title</p>
+    </td>
+    <td>
+<p>release_year</p>
+    </td>
+    <td>
+<p>genre</p>
+    </td>
+    <td>
+<p>imbd_rating</p>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+<p>language_id</p>
+    </td>
+    <td>
+<p>language_name</p>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p>1</p>
+    </td>
+    <td>
+<p>Dhoni</p>
+    </td>
+    <td>
+<p>2016</p>
+    </td>
+    <td>
+<p>Biography,Sport</p>
+    </td>
+    <td>
+<p>8.4</p>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+<p>1</p>
+    </td>
+    <td>
+<p>Hindi</p>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p>2</p>
+    </td>
+    <td>
+<p>Bajarangi Bhaijaan</p>
+    </td>
+    <td>
+<p>2015</p>
+    </td>
+    <td>
+<p>Action,Comedy</p>
+    </td>
+    <td>
+<p>8</p>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+<p>2</p>
+    </td>
+    <td>
+<p>Tamil</p>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p>3</p>
+    </td>
+    <td>
+<p>Bahubali:The Beginning</p>
+    </td>
+    <td>
+<p>2015</p>
+    </td>
+    <td>
+<p>Action,Drama</p>
+    </td>
+    <td>
+<p>8.1</p>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+<p>3</p>
+    </td>
+    <td>
+<p>Telugu</p>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p>4</p>
+    </td>
+    <td>
+<p>Pushpa:The Rise</p>
+    </td>
+    <td>
+<p>2021</p>
+    </td>
+    <td>
+<p>Action,Thriller</p>
+    </td>
+    <td>
+<p>8.3</p>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+<p>4</p>
+    </td>
+    <td>
+<p>Kannada</p>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p>5</p>
+    </td>
+    <td>
+<p>KGF:Chapter 2</p>
+    </td>
+    <td>
+<p>2021</p>
+    </td>
+    <td>
+<p>Action,Drama</p>
+    </td>
+    <td>
+<p>8.8</p>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p>6</p>
+    </td>
+    <td>
+<p>Kantara</p>
+    </td>
+    <td>
+<p>2022</p>
+    </td>
+    <td>
+<p>Action,Thriller</p>
+    </td>
+    <td>
+<p>8.4</p>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p>7</p>
+    </td>
+    <td>
+<p>Mersal</p>
+    </td>
+    <td>
+<p>2017</p>
+    </td>
+    <td>
+<p>Drama,Thriller</p>
+    </td>
+    <td>
+<p>7.7</p>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p>8</p>
+    </td>
+    <td>
+<p>Drishyam</p>
+    </td>
+    <td>
+<p>2015</p>
+    </td>
+    <td>
+<p>Crime,Mystery</p>
+    </td>
+    <td>
+<p>8.9</p>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td>
+    </td>
+    <td>
+<p>                   movie_budget</p>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+<p>Actors</p>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+<p>                      Awards</p>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p>movie_id</p>
+    </td>
+    <td>
+<p>budget</p>
+    </td>
+    <td>
+<p>gross_income</p>
+    </td>
+    <td>
+<p>unit</p>
+    </td>
+    <td>
+    </td>
+    <td>
+<p>movie_id</p>
+    </td>
+    <td>
+<p>actor_name</p>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+<p>movie_id</p>
+    </td>
+    <td>
+<p>award_name</p>
+    </td>
+    <td>
+<p>award_category</p>
+    </td>
+    <td>
+<p>award_year</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p>1</p>
+    </td>
+    <td>
+<p>1.33</p>
+    </td>
+    <td>
+<p>2.15</p>
+    </td>
+    <td>
+<p>Billions</p>
+    </td>
+    <td>
+    </td>
+    <td>
+<p>1</p>
+    </td>
+    <td>
+<p>Sushanth Singh Rajputh</p>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+<p>1</p>
+    </td>
+    <td>
+<p>Stardust</p>
+    </td>
+    <td>
+<p>Best DebutActress</p>
+    </td>
+    <td>
+<p>2017</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p>2</p>
+    </td>
+    <td>
+<p>0.8</p>
+    </td>
+    <td>
+<p>9.5</p>
+    </td>
+    <td>
+<p>Billions</p>
+    </td>
+    <td>
+    </td>
+    <td>
+<p>2</p>
+    </td>
+    <td>
+<p>Salman Khan</p>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+<p>2</p>
+    </td>
+    <td>
+<p>National Filmaward</p>
+    </td>
+    <td>
+<p>Best Story</p>
+    </td>
+    <td>
+<p>2016</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p>3</p>
+    </td>
+    <td>
+<p>1.8</p>
+    </td>
+    <td>
+<p>6</p>
+    </td>
+    <td>
+<p>Billions</p>
+    </td>
+    <td>
+    </td>
+    <td>
+<p>3</p>
+    </td>
+    <td>
+<p>Prabhas</p>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+<p>3</p>
+    </td>
+    <td>
+<p>Nandi Award</p>
+    </td>
+    <td>
+<p>Best Director</p>
+    </td>
+    <td>
+<p>2017</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p>4</p>
+    </td>
+    <td>
+<p>2.1</p>
+    </td>
+    <td>
+<p>3.5</p>
+    </td>
+    <td>
+<p>Billions</p>
+    </td>
+    <td>
+    </td>
+    <td>
+<p>4</p>
+    </td>
+    <td>
+<p>Allu Arjun</p>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+<p>4</p>
+    </td>
+    <td>
+<p>National Filmaward</p>
+    </td>
+    <td>
+<p>Best Actor</p>
+    </td>
+    <td>
+<p>2023</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p>5</p>
+    </td>
+    <td>
+<p>2.5</p>
+    </td>
+    <td>
+<p>12.5</p>
+    </td>
+    <td>
+<p>Billions</p>
+    </td>
+    <td>
+    </td>
+    <td>
+<p>5</p>
+    </td>
+    <td>
+<p>Yash</p>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+<p>5</p>
+    </td>
+    <td>
+<p>SIIMA</p>
+    </td>
+    <td>
+<p>Best Actor</p>
+    </td>
+    <td>
+<p>2023</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p>6</p>
+    </td>
+    <td>
+<p>0.15</p>
+    </td>
+    <td>
+<p>4.3</p>
+    </td>
+    <td>
+<p>Billions</p>
+    </td>
+    <td>
+    </td>
+    <td>
+<p>6</p>
+    </td>
+    <td>
+<p>Rishab Shetty</p>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+<p>6</p>
+    </td>
+    <td>
+<p>SIIMA</p>
+    </td>
+    <td>
+<p>Best Director</p>
+    </td>
+    <td>
+<p>2023</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p>7</p>
+    </td>
+    <td>
+<p>1.2</p>
+    </td>
+    <td>
+<p>2.6</p>
+    </td>
+    <td>
+<p>Billions</p>
+    </td>
+    <td>
+    </td>
+    <td>
+<p>7</p>
+    </td>
+    <td>
+<p>Vijay</p>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+<p>7</p>
+    </td>
+    <td>
+<p>Filmfare</p>
+    </td>
+    <td>
+<p>Best MusicDirector</p>
+    </td>
+    <td>
+<p>2018</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+<p>8</p>
+    </td>
+    <td>
+<p>0.35</p>
+    </td>
+    <td>
+<p>1.11</p>
+    </td>
+    <td>
+<p>Billions</p>
+    </td>
+    <td>
+    </td>
+    <td>
+<p>8</p>
+    </td>
+    <td>
+<p>MohanLal</p>
+    </td>
+    <td>
+    </td>
+    <td>
+    </td>
+    <td>
+<p>8</p>
+    </td>
+    <td>
+<p>Asianet Film</p>
+    </td>
+    <td>
+<p>Best Film</p>
+    </td>
+    <td>
+<p>2014</p>
+    </td>
+  </tr>
+</table>
+<h1 style="page-break-before:always; "><b>DataTypes</b></h1>
+<ul>
+<li>Overview of Data Types Used:</li>
+<h2>  The dataset uses various data types, including integers, decimals, varchars,    and dates, to represent different attributes.</h2>
+<li>Explanation of Each Data Type:</li>
+<li>Integer: Used for numerical values without decimal points, such as movie IDs.</li>
+<li>Decimal: Used for monetary values, such as budget and gross income.</li>
+<li>Varchar: Used for textual data, such as movie titles and actor names.</li>
+<li>Date: Used to represent dates, such as release years and award years.</li>
+</ul>
+<h1 style="page-break-before:always; ">Queries and Analysis</h1>
+<ul>
+<li>SQL Queries Used:</li>
+<h2>A variety of SQL queries were employed to extract, filter, aggregate,and analyze data from the database.</h2>
+<li>Data Analysis:</li>
+<h2>The dataset was analyzed to identify trends, patterns, and insights related to movie genres, ratings, box office performance, and more.</h2>
+<li>Insights Extracted:</li>
+<h2>Insights were extracted from the data analysis to inform decision-making in the film industry, such as genre preferences, award-winning factors, and budget considerations.</h2>
+</ul>
+<h1 style="page-break-before:always; ">Tools and Management</h1>
+<ul>
+<li>Database Management (Queries):</li>
+<li>PostgreSQL: PostgreSQL, an open-source relational database management system, was utilized for storing and managing the dataset. SQL queries were executed in PostgreSQL to manipulate and retrieve data efficiently.</li>
+<li>Entity-Relationship Diagram (ERD) Creation:</li>
+<li>Lucidchart: Lucidchart, a web-based diagramming software, was used to create the Entity-Relationship Diagram (ERD). The ERD visually represents the relationships between entities (tables) in the database, aiding in understanding the database structure.</li>
+<li>Code Sharing and Version Control:</li>
+<li>GitHub: GitHub, a web-based platform for version control using Git, was utilized for sharing code, collaborating with team members, and managing project repositories. It facilitated seamless collaboration and ensured version control throughout the project lifecycle.</li>
+</ul>
+<h1 style="page-break-before:always; ">Hilite.me :</h1>
+<ul>
+<li>Hilite.me :</li>
+<h2>hilite.me is a tool for syntax highlighting code snippets. You can use it to format and highlight your code examples in your project documentation. Here's how you can use it:</h2>
+<li>Go to the hilite.me website.</li>
+<li>Enter your code snippet in the text area.</li>
+<li>Choose your preferred programming language from the dropdown menu.</li>
+<li>Click on the &quot;Highlight!&quot; button.</li>
+<li>Copy the highlighted code and paste it into your project documentation.</li>
+</ul>
+<h1 style="page-break-before:always; ">Queries :</h1>
+<ul>
+<li>Queries :</li>
+<li>Retrive the total gross Income</li>
+<li>Give all the details of the movies having movie_id 2,4,6&amp;8.</li>
+<li>What is the average rating of all the movies and Round the value upto Two decimal Places</li>
+<li>Which are highest and lowest rated movies </li>
+<li>Retrieve information about movies, including their title, release year, genre, IMDB rating, associated awards, budget, and gross income, grouped by movie title and release year, ordered by release year in descending order.</li>
+<li> Retrieve the movie titles and total budget for movies that received awards in 2023</li>
+<li>Retrive the title,release year,actor name of Best Actor</li>
+<li>Retrive the data of total budget and total profit using CTE</li>
+<li>Retrive the movie with Highest Profit</li>
+</ul>
+<h1 style="page-break-before:always; "></h1>
+<h2>	</h2>
+<h2> </h2>
+<h2> </h2>
+<h2> </h2>
+<h2>	</h2>
+<h2> </h2>
+<h2> </h2>
+<h2> </h2>
+<h1 style="page-break-before:always; "></h1>
+<h1 style="page-break-before:always; "></h1>
+<h1 style="page-break-before:always; "></h1>
+<h1 style="page-break-before:always; "></h1>
+<p><a href="http://phoenixajournal.wordpress.com/2012/02/23/thank-you/"><u>This Photo</u></a> by Unknown Author is licensed under <a href="https://creativecommons.org/licenses/by/3.0/"><u>CC BY</u></a></p>
+</body>
+</html>
